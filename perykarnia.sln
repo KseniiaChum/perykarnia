@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "perykarnia", "perykarnia\perykarnia.csproj", "{983AD25E-4562-461F-919D-FE643A1EA227}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{983AD25E-4562-461F-919D-FE643A1EA227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{983AD25E-4562-461F-919D-FE643A1EA227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{983AD25E-4562-461F-919D-FE643A1EA227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{983AD25E-4562-461F-919D-FE643A1EA227}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DA658F7-B4F7-4C1A-B2CC-95AC70416150}
+	EndGlobalSection
+EndGlobal
