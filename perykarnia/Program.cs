@@ -28,10 +28,10 @@ Console.WriteLine("\t5. Dalete services");
 Console.WriteLine("\t6. Sell services");
 Console.WriteLine("\t7. register services");
 
-public class Perycarnia
+public class Service
 {
 	public string Name { get; set;}
-    public double Prise { get; set; }
+    public double Priсe { get; set; }
     public double Category{ get; set; }
 }
 
@@ -45,6 +45,15 @@ public class Нairdresser
 public class Client
 {
     public string Name { get; set; }
-    public string haircut { get; set; }
-    public string hour { get; set; }
+
+    public double Number { get; set; }
+}
+
+public class Order
+{
+    public string Name { get; set; }
+    public string Haircut { get; set; }
+    public double Hour { get; set; }
+    public string Clientneme { get; set; }
+
 }
