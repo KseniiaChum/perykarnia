@@ -28,11 +28,40 @@ Console.WriteLine("\t5. Dalete services");
 Console.WriteLine("\t6. Sell services");
 Console.WriteLine("\t7. register services");
 
+
+Service service = new();
+
+while (true)
+{
+    Console.Write("Your choice: ");
+    int choice = Convert.ToInt32(Console.ReadLine());
+
+    switch (choice)
+    {
+        case 1:
+            Console.Write("Enter Service name: ");
+            service.Name = Console.ReadLine();
+            Console.Write("Enter Service category: ");
+            service.Category = Console.ReadLine();
+            Console.Write("Enter Service price: ");
+            service.Priсe = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter Service quantity: ");
+
+            break;
+        case 4:
+            Console.WriteLine("------- Service ---------");
+            Console.WriteLine($"Name: {service.Name}");
+            Console.WriteLine($"Category: {service.Category}");
+            Console.WriteLine($"Price: {service.Priсe}");
+            break;
+    }
+}
+
 public class Service
 {
 	public string Name { get; set;}
     public double Priсe { get; set; }
-    public double Category{ get; set; }
+    public string Category { get; set; }
 }
 
 public class Нairdresser
