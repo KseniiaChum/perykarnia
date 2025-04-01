@@ -17,6 +17,8 @@
 	*/
 
 
+using System.Text.Json;
+
 Console.WriteLine("------Welcome to perycarnia-------");
 
 Console.WriteLine("\tMENU:");
@@ -29,7 +31,7 @@ Console.WriteLine("\t6. Sell services");
 Console.WriteLine("\t7. register services");
 
 
-Service service = new();
+List<Service> services= new();
 
 while (true)
 {
@@ -39,20 +41,35 @@ while (true)
     switch (choice)
     {
         case 1:
+            var newItem = new Service();
+
             Console.Write("Enter Service name: ");
-            service.Name = Console.ReadLine();
+            newItem.Name = Console.ReadLine();
             Console.Write("Enter Service category: ");
-            service.Category = Console.ReadLine();
+            newItem.Category = Console.ReadLine();
             Console.Write("Enter Service price: ");
-            service.Priсe = Convert.ToDouble(Console.ReadLine());
+            newItem.Priсe = Convert.ToDouble(Console.ReadLine());
             Console.Write("Enter Service quantity: ");
 
+            services.Add(newItem);
+            break;
+        case 2:
+            string jsonToSave = JsonSerializer.Serialize(services);
+            Console.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+            File.WriteAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}/services_db.json", jsonToSave);
+            break;
+        case 3:
+            string jsonToLoad = File.ReadAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}/products_db.json");
+            services = JsonSerializer.Deserialize<List<Service>>(jsonToLoad);
             break;
         case 4:
+            foreach (var item in services)
+      { 
             Console.WriteLine("------- Service ---------");
-            Console.WriteLine($"Name: {service.Name}");
-            Console.WriteLine($"Category: {service.Category}");
-            Console.WriteLine($"Price: {service.Priсe}");
+            Console.WriteLine($"Name: {item.Name}");
+            Console.WriteLine($"Category: {item.Category}");
+            Console.WriteLine($"Price: {item.Priсe}");
+                }
             break;
     }
 }
