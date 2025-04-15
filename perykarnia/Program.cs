@@ -90,35 +90,3 @@ while (true)
 
     }
 }
-
-public class Service
-{
-	public string Name { get; set;}
-    public double Priсe { get; set; }
-    public string Category { get; set; }
-
-    
-}
-
-public class Нairdresser
-{
-    public string Name { get; set; }
-    public string Experience { get; set; }
-    public string Age { get; set; }
-}
-
-public class Client
-{
-    public string Name { get; set; }
-
-    public double Number { get; set; }
-}
-
-public class Order
-{
-    public string Name { get; set; }
-    public string Haircut { get; set; }
-    public double Hour { get; set; }
-    public string Clientneme { get; set; }
-
-}
