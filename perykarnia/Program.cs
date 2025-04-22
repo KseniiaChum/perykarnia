@@ -48,24 +48,10 @@ while (true)
            
             break;
         case 4:
-            foreach (var item in services)
-            {
-                Console.WriteLine("------- Service ---------");
-                Console.WriteLine($"Name: {item.Name}");
-                Console.WriteLine($"Category: {item.Category}");
-                Console.WriteLine($"Price: {item.Priсe}");
-            }
+           
             break;
         case 5:
-            for (int i = 0; i < services.Count; ++i)
-                Console.WriteLine($"[{i}] Service: " + services[i].Name);
-
-            Console.WriteLine("Enter number to delate:");
-            int numToDelete = Convert.ToInt32(Console.ReadLine());
-
-            if (numToDelete < 0 || numToDelete >= services.Count)
-            {
-                Console.WriteLine("Number out of range!");
+           
             break;
             }
             services.RemoveAt(numToDelete);
