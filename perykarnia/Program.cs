@@ -43,13 +43,9 @@ while (true)
             
             break;
         case 2:
-            string jsonToSave = JsonSerializer.Serialize(services);
-            Console.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
-            File.WriteAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}/services_db.json", jsonToSave);
-            break;
+           break;
         case 3:
-            string jsonToLoad = File.ReadAllText($"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}/products_db.json");
-            services = JsonSerializer.Deserialize<List<Service>>(jsonToLoad);
+           
             break;
         case 4:
             foreach (var item in services)
