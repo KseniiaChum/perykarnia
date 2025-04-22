@@ -17,6 +17,7 @@
 	*/
 
 
+using perykarnia;
 using System.Text.Json;
 
 Console.WriteLine("------Welcome to perycarnia-------");
@@ -31,6 +32,7 @@ Console.WriteLine("\t6. Sell services");
 Console.WriteLine("\t7. register services");
 
 
+Peryka p = new();
 
 while (true)
 {
@@ -40,22 +42,20 @@ while (true)
     switch (choice)
     {
         case 1:
-            
+            p.AddProduct();
             break;
         case 2:
+            p.Load();
            break;
         case 3:
-           
+            p.Save();
             break;
         case 4:
-           
+            p.Services();
             break;
         case 5:
+            p.Delate();
            
-            break;
-            }
-            services.RemoveAt(numToDelete);
-            Console.WriteLine("Service deleted successfully!");
             break;
 
 
