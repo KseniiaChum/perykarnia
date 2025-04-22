@@ -31,7 +31,6 @@ Console.WriteLine("\t6. Sell services");
 Console.WriteLine("\t7. register services");
 
 
-List<Service> services= new();
 
 while (true)
 {
@@ -41,17 +40,7 @@ while (true)
     switch (choice)
     {
         case 1:
-            var newItem = new Service();
-
-            Console.Write("Enter Service name: ");
-            newItem.Name = Console.ReadLine();
-            Console.Write("Enter Service category: ");
-            newItem.Category = Console.ReadLine();
-            Console.Write("Enter Service price: ");
-            newItem.Priсe = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter Service quantity: ");
-
-            services.Add(newItem);
+            
             break;
         case 2:
             string jsonToSave = JsonSerializer.Serialize(services);
